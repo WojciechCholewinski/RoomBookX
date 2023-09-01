@@ -1,0 +1,63 @@
+﻿@page "{id:int}"
+@model RoomBookX.Pages.Reservations.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <div class="tabelka">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.CustomerName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.CustomerName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.CustomerSurname)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.CustomerSurname)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.RoomNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.RoomNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.Capacity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.Capacity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.StartTime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.StartTime)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Reservation.EndTime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Reservation.EndTime)
+            </dd>
+        </dl>
+    </div>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Reservation?.Id">Edytuj rezerwację</a> |
+    <a asp-page="./Index"> Powrót</a>
+</div>

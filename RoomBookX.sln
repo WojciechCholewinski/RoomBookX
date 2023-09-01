@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookX", "RoomBookX\RoomBookX.csproj", "{CF38C9E2-8B79-41D6-9050-A50A5597233B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF38C9E2-8B79-41D6-9050-A50A5597233B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF38C9E2-8B79-41D6-9050-A50A5597233B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF38C9E2-8B79-41D6-9050-A50A5597233B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF38C9E2-8B79-41D6-9050-A50A5597233B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D89BF389-5FA5-46E7-AA1F-DAAF2F616174}
+	EndGlobalSection
+EndGlobal

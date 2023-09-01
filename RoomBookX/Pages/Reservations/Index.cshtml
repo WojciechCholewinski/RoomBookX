@@ -1,0 +1,88 @@
+﻿@page
+@model RoomBookX.Pages.Reservations.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    string m = "m";     // metry
+}
+
+<h1>Rezerwacje</h1>
+
+<p>
+    <a asp-page="Create">Nowa rezerwacja</a>
+</p>
+
+<form>
+    <p>
+        <select asp-for="RoomNumber" asp-items="Model.Rooms">
+            <option value="">Numer sali</option>
+        </select>
+
+        Wyszukaj po nazwisku: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Wyszukaj" />
+    </p>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].CustomerSurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].RoomNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Reservation)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerSurname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capacity)@if(item.Capacity!=null){@m<sup>2</sup>}    
+                                                @*oznaczenie m^2 jedynie gdy wpiszemy jakąś wartość*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edytuj</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Szczegóły</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Usuń rezerwację</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
